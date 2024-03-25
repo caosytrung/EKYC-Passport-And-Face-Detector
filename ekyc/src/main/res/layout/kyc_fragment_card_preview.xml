@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fast.ekyc.ui.card.card_preview.CardPreviewViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/previewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.fast.ekyc.ui.widget.overlay.CardPreviewOverlayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/overlayView" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/kyc_card_header_size"
+            android:layout_marginTop="@dimen/kyc_margin_padding_default_larger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/kyc_icon_size_large"
+                android:layout_height="@dimen/kyc_icon_size_large"
+                android:layout_marginStart="@dimen/kyc_margin_padding_default"
+                android:background="@drawable/kyc_icon_state"
+                android:padding="@dimen/kyc_margin_padding_tiny"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kyc_ic_close" />
+
+            <com.fast.ekyc.ui.widget.AppBoldTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/kyc_capture_id_card"
+                android:textColor="@color/kyc_color_white"
+                android:textSize="@dimen/kyc_text_size_title"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGuide"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/kyc_margin_padding_default"
+                app:invisible="@{!viewModel.showHelp}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kyc_bg_guide_icon"
+                tools:visibility="visible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewFrame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/kyc_margin_padding_default"
+            android:layout_marginEnd="@dimen/kyc_margin_padding_default"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,79:50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.fast.ekyc.ui.widget.AppThemeTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.displayAcceptedCardTypes}"
+            android:textSize="@dimen/kyc_text_size_title"
+            android:layout_marginEnd="@dimen/kyc_margin_padding_default"
+            app:layout_constraintEnd_toStartOf="@id/tvCardGuide"
+            app:layout_constraintStart_toStartOf="@id/viewFrame"
+            app:layout_constraintBottom_toTopOf="@id/viewFrame"
+            app:layout_constraintHorizontal_bias="0"
+            tools:text="Chứng minh nhân dân/Căn cước công dân/Bằng lái xe"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_default_smaller" />
+
+        <com.fast.ekyc.ui.widget.AppThemeTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvCardGuide"
+            tools:text="Mat truoc"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.displayCardSide}"
+            android:textSize="@dimen/kyc_text_size_title"
+            app:layout_constraintEnd_toEndOf="@id/viewFrame"
+            app:layout_constraintBottom_toTopOf="@id/viewFrame"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_default_smaller" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_ultra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="gone"
+            app:visible="@{viewModel.getState().isLoading()}">
+
+            <com.fast.ekyc.ui.widget.ProgressView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.fast.ekyc.ui.widget.AppRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/kyc_color_white"
+
+                android:layout_marginStart="@dimen/kyc_margin_padding_tiny"
+                android:text="@string/kyc_loading_text" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lnPreview"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/kyc_margin_padding_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_huge"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.fast.ekyc.ui.widget.AppButton
+                    android:id="@+id/btnRecapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/kyc_margin_padding_default"
+                    android:layout_weight="1"
+                    android:text="@string/kyc_recapture" />
+
+                <com.fast.ekyc.ui.widget.AppButton
+                    android:id="@+id/btnUseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/kyc_common_use_image" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

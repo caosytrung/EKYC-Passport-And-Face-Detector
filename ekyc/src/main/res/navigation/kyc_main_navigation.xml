@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kyc_main_navigation"
+    app:startDestination="@id/kyc_cardcapturefragment">
+
+    <fragment
+        android:id="@+id/kyc_cardcapturefragment"
+        android:name="com.fast.ekyc.ui.card.card_capture.CardCaptureFragment"
+        android:label="CardCaptureFragment">
+        <action
+            android:id="@+id/kyc_action_kyc_cardcapturefragment_to_kyc_cardpreviewfragment"
+            app:destination="@id/kyc_cardpreviewfragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/kyc_facecapturefragment"
+        android:name="com.fast.ekyc.ui.face.face_capture.FaceCaptureFragment"
+        android:label="FaceCaptureFragment">
+        <action
+            android:id="@+id/kyc_action_kyc_facecapturefragment_to_kyc_facepreviewfragment"
+            app:destination="@id/kyc_facepreviewfragment" />
+        <action
+            android:id="@+id/kyc_action_kyc_facecapturefragment_to_kyc_cardcapturefragment"
+            app:destination="@id/kyc_cardcapturefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kyc_cardpreviewfragment"
+        android:name="com.fast.ekyc.ui.card.card_preview.CardPreviewFragment"
+        android:label="CardPreviewFragment">
+        <action
+            app:popUpTo="@+id/kyc_main_navigation"
+            app:popUpToInclusive="true"
+            android:id="@+id/kyc_action_kyc_cardpreviewfragment_to_kyc_facecapturefragment"
+            app:destination="@id/kyc_facecapturefragment" />
+        <action
+            app:popUpTo="@+id/kyc_main_navigation"
+            app:popUpToInclusive="true"
+            android:id="@+id/kyc_action_kyc_cardpreviewfragment_to_kyc_cardcapturefragment"
+            app:destination="@id/kyc_cardcapturefragment" />
+        <argument
+            android:name="cardType"
+            android:defaultValue="CMND"
+            app:argType="com.fast.ekyc.native.model.CardObject$AICardType" />
+    </fragment>
+    <fragment
+        android:id="@+id/kyc_facepreviewfragment"
+        android:name="com.fast.ekyc.ui.face.face_preview.FacePreviewFragment"
+        android:label="FacePreviewFragment">
+        <action
+            app:popUpTo="@+id/kyc_main_navigation"
+            app:popUpToInclusive="true"
+            android:id="@+id/kyc_action_kyc_facepreviewfragment_to_kyc_cardcapturefragment"
+            app:destination="@id/kyc_cardcapturefragment" />
+    </fragment>
+</navigation>

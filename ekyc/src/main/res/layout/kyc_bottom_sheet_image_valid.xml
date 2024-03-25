@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.fast.ekyc.ui.widget.AppButton
+            android:id="@+id/btnUseImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/kyc_margin_padding_default_smaller"
+            android:layout_marginTop="@dimen/kyc_margin_padding_default"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_small"
+            android:text="@string/kyc_common_use_image"
+            android:textAllCaps="false"
+            android:textColor="@color/kyc_color_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.fast.ekyc.ui.widget.AppButton
+            android:id="@+id/btnRecapture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/kyc_margin_padding_default_smaller"
+            android:layout_marginTop="@dimen/kyc_margin_padding_default"
+            android:layout_marginBottom="@dimen/kyc_margin_padding_small"
+            android:text="@string/kyc_recapture"
+            android:textAllCaps="false"
+            android:textColor="@color/kyc_color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnUseImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

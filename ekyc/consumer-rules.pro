@@ -1,0 +1,8 @@
+-keep class com.fast.ekyc.data.network.model.** { *; }
+-keep class com.fast.ekyc.data.model.** { *; }
+-keep class com.fast.ekyc.native.model.** { *; }
+-keep class android.nfc.tech.IsoDep {*;}
+-keep class org.jmrtd.** { *; }
+-keep class net.sf.scuba.** {*;}
+-keep class org.bouncycastle.** {*;}
+-keep class org.ejbca.** {*;}

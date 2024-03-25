@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="kyc_common_zero">0dp</dimen>
+    <dimen name="kyc_common_padding_bottom">40dp</dimen>
+
+    <dimen name="kyc_margin_padding_ultra_tiny">1dp</dimen>
+    <dimen name="kyc_margin_padding_extreme_tiny">2dp</dimen>
+    <dimen name="kyc_margin_padding_tiny">4dp</dimen>
+    <dimen name="kyc_margin_padding_tiny_larger">6dp</dimen>
+    <dimen name="kyc_margin_padding_small">8dp</dimen>
+    <dimen name="kyc_margin_padding_small_larger">10dp</dimen>
+    <dimen name="kyc_margin_padding_default_smaller">12dp</dimen>
+    <dimen name="kyc_margin_padding_default_smaller_tiny">14dp</dimen>
+    <dimen name="kyc_margin_padding_default">16dp</dimen>
+    <dimen name="kyc_margin_padding_default_larger">20dp</dimen>
+    <dimen name="kyc_margin_padding_medium">24dp</dimen>
+    <dimen name="kyc_margin_padding_medium_larger">28dp</dimen>
+    <dimen name="kyc_margin_padding_large">32dp</dimen>
+    <dimen name="kyc_margin_padding_larger">40dp</dimen>
+    <dimen name="kyc_margin_padding_huge">48dp</dimen>
+    <dimen name="kyc_margin_padding_ultra">64dp</dimen>
+
+    <dimen name="kyc_text_size_gigantic">36sp</dimen>
+    <dimen name="kyc_text_size_larger">28sp</dimen>
+    <dimen name="kyc_text_size_large">24sp</dimen>
+    <dimen name="kyc_text_size_medium">20sp</dimen>
+    <dimen name="kyc_text_size_title_larger">18sp</dimen>
+    <dimen name="kyc_text_size_title">16sp</dimen>
+    <dimen name="kyc_text_size_normal">14sp</dimen>
+    <dimen name="kyc_text_size_default_smaller">12sp</dimen>
+    <dimen name="kyc_text_size_tiny_larger">11sp</dimen>
+    <dimen name="kyc_text_size_tiny_medium">10sp</dimen>
+    <dimen name="kyc_text_size_tiny">7sp</dimen>
+    <dimen name="kyc_text_size_extreme_tiny">6sp</dimen>
+    <dimen name="kyc_text_size_ultra_tiny">4sp</dimen>
+
+    <dimen name="kyc_footer_height">72dp</dimen>
+
+    //border
+    <dimen name="kyc_border_small">0.5dp</dimen>
+    <dimen name="kyc_border_medium">1dp</dimen>
+    <dimen name="kyc_border_Large">1.5dp</dimen>
+    <dimen name="kyc_border_xLarge">2dp</dimen>
+
+    // radius
+    <dimen name="kyc_radius_tiny">2dp</dimen>
+    <dimen name="kyc_radius_small">4dp</dimen>
+    <dimen name="kyc_radius_default_smaller">6dp</dimen>
+    <dimen name="kyc_radius_default">8dp</dimen>
+    <dimen name="kyc_radius_medium">12dp</dimen>
+    <dimen name="kyc_radius_large">16dp</dimen>
+    <dimen name="kyc_radius_larger">20dp</dimen>
+    <dimen name="kyc_radius_extra">24dp</dimen>
+    <dimen name="kyc_radius_extra_large">30dp</dimen>
+
+    <dimen name="kyc_overlay_item_frame_thickness">4dp</dimen>
+    <dimen name="kyc_overlay_preview_frame_thickness">2dp</dimen>
+    <dimen name="kyc_overlay_preview_circle_radius">4dp</dimen>
+    <dimen name="kyc_card_overlay_preview_circle_radius">8dp</dimen>
+    <dimen name="kyc_overlay_item_frame_size">28dp</dimen>
+    <dimen name="kyc_scan_overlay_view_hole_margin_bottom">64dp</dimen>
+    <dimen name="kyc_card_header_size">80dp</dimen>
+    <dimen name="kyc_face_bottom_size">100dp</dimen>
+
+    <dimen name="kyc_icon_size_default">24dp</dimen>
+    <dimen name="kyc_icon_size_medium">28dp</dimen>
+    <dimen name="kyc_icon_size_large">36dp</dimen>
+
+    <dimen name="kyc_margin_camera">36dp</dimen>
+    <dimen name="kyc_button_height">46dp</dimen>
+    <dimen name="kyc_button_height_large">56dp</dimen>
+
+    <dimen name="kyc_advanced_guide_image_focus">60dp</dimen>
+    <dimen name="kyc_advanced_guide_image_unfocus">52dp</dimen>
+
+</resources>

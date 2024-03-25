@@ -1,0 +1,27 @@
+                    Executable : /usr/local/bin/cmake
+arguments : 
+-H/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=19
+-DANDROID_PLATFORM=android-19
+-DANDROID_ABI=x86
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DANDROID_NDK=/Users/caotrung/Library/Android/sdk/ndk/21.4.7075529
+-DCMAKE_ANDROID_NDK=/Users/caotrung/Library/Android/sdk/ndk/21.4.7075529
+-DCMAKE_TOOLCHAIN_FILE=/Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/usr/local/bin/ninja
+-DCMAKE_CXX_FLAGS=-std=c++11
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/x86
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/x86
+-DCMAKE_BUILD_TYPE=Debug
+-B/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86
+-GNinja
+-DOpenCV_DIR=/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_STL=c++_shared
+jvmArgs : 
+
+
+                    Build command args: []
+                    Version: 2

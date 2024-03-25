@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Title
+
+    <style name="KycTitle1">
+        <item name="android:textSize">20sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_black</item>-->
+    </style>
+
+    <style name="KycTitle2">
+        <item name="android:textSize">18sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_bold</item>-->
+    </style>
+
+    // Subtitle
+
+    <style name="KycSubtitle1">
+        <item name="android:textSize">15sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_bold</item>-->
+    </style>
+
+    <style name="KycSubtitle2">
+        <item name="android:textSize">15sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_medium</item>-->
+    </style>
+
+    <style name="KycSubtitle3">>
+        <item name="android:textSize">13sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_bold</item>-->
+    </style>
+
+    <style name="KycSubtitle4">
+        <item name="android:textSize">13sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_medium</item>-->
+    </style>
+
+    // Body
+
+    <style name="KycBody1">
+        <item name="android:textSize">13sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_regular</item>-->
+    </style>
+
+    <style name="KycBody2">
+        <item name="android:textSize">13sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_medium</item>-->
+    </style>
+
+    // Caption
+
+    <style name="KycCaption1">
+        <item name="android:textSize">12sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_regular</item>-->
+    </style>
+
+    <style name="KycCaption2">
+        <item name="android:textSize">12sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_medium</item>-->
+    </style>
+
+    <style name="KycCaption3">
+        <item name="android:textSize">10sp</item>
+        <!--    <item name="android:fontFamily">@font/Kyc_roboto_medium</item>-->
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="KycDialogFullWidthStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">98%</item>
+        <item name="android:windowMinWidthMinor">98%</item>
+    </style>
+
+    <style name="KycLoadingIndicatorStyle">
+        <item name="colorAccent">@color/kyc_color_white</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/kyc_color_transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="KycScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="KycBaseBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/KycBottomSheet</item>
+    </style>
+
+    <style name="KycErrorBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/KycErrorBottomSheet</item>
+    </style>
+
+    <style name="KycBottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+    <style name="KycErrorBottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/kyc_bg_error_bottom_dialog</item>
+    </style>
+
+
+</resources>

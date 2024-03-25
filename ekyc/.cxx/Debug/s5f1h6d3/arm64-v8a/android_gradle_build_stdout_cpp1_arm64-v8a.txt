@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a'
+ninja: no work to do.

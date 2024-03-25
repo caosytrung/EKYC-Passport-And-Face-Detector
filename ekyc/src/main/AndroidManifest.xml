@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fast.ekyc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--    <uses-permission android:name="android.permission.NFC" />-->
+
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.nfc"-->
+    <!--        android:required="true" />-->
+
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:hardwareAccelerated="true"
+            android:name="com.fast.ekyc.ui.main.MainActivity"
+            android:theme="@style/KycScreenTheme"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.nfc_scan.MyNfcScanActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/KycScreenTheme">
+
+            <!--            <intent-filter>-->
+            <!--                <action android:name="com.tananaev.passportreader.REQUEST" />-->
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--            </intent-filter>-->
+        </activity>
+    </application>
+
+
+</manifest>

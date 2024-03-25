@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="kyc_color_white">#FFFFFF</color>
+    <color name="kyc_color_transparent">#00000000</color>
+    <color name="kyc_color_red">#EE0033</color>
+    <color name="kyc_color_green">#01AD52</color>
+    <color name="kyc_switch_off">#DCDEE9</color>
+
+    <color name="kyc_overlay_color">#A4000000</color>
+    <color name="kyc_face_overlay_color">#373646</color>
+    <color name="kyc_color_black">#000000</color>
+    <color name="kyc_frame_color">#B4B4B4</color>
+    <color name="kyc_face_detection_bg_color">#8D0000</color>
+    <color name="kyc_color_error">#EA0029</color>
+    <color name="kyc_blue">#007AFF</color>
+    <color name="kyc_line_color">#3F3F3F</color>
+    <color name="kyc_face_action_unfocus">#D8D8D8</color>
+    <color name="kyc_color_camera_background_color">#66000000</color>
+    <color name="kyc_start_recording_inactive">#80EE0033</color>
+
+</resources>

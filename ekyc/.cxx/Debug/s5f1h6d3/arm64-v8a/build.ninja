@@ -1,0 +1,182 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: cpp1
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a/
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target cpp1
+
+
+#############################################
+# Order-only phony target for cpp1
+
+build cmake_object_order_depends_target_cpp1: phony || CMakeFiles/cpp1.dir
+
+build CMakeFiles/cpp1.dir/native-lib.cpp.o: CXX_COMPILER__cpp1_Debug /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/native-lib.cpp || cmake_object_order_depends_target_cpp1
+  DEFINES = -Dcpp1_EXPORTS
+  DEP_FILE = CMakeFiles/cpp1.dir/native-lib.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info  -fPIC -std=c++11 -frtti -fexceptions -pthread -std=c++11
+  INCLUDES = -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include/opencv -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/include/ncnn
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp1.dir
+
+build CMakeFiles/cpp1.dir/src/config.cpp.o: CXX_COMPILER__cpp1_Debug /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/src/config.cpp || cmake_object_order_depends_target_cpp1
+  DEFINES = -Dcpp1_EXPORTS
+  DEP_FILE = CMakeFiles/cpp1.dir/src/config.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info  -fPIC -std=c++11 -frtti -fexceptions -pthread -std=c++11
+  INCLUDES = -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include/opencv -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/include/ncnn
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp1.dir/src
+
+build CMakeFiles/cpp1.dir/src/tools.cpp.o: CXX_COMPILER__cpp1_Debug /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/src/tools.cpp || cmake_object_order_depends_target_cpp1
+  DEFINES = -Dcpp1_EXPORTS
+  DEP_FILE = CMakeFiles/cpp1.dir/src/tools.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info  -fPIC -std=c++11 -frtti -fexceptions -pthread -std=c++11
+  INCLUDES = -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include/opencv -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/include/ncnn
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp1.dir/src
+
+build CMakeFiles/cpp1.dir/src/face.cpp.o: CXX_COMPILER__cpp1_Debug /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/src/face.cpp || cmake_object_order_depends_target_cpp1
+  DEFINES = -Dcpp1_EXPORTS
+  DEP_FILE = CMakeFiles/cpp1.dir/src/face.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info  -fPIC -std=c++11 -frtti -fexceptions -pthread -std=c++11
+  INCLUDES = -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include/opencv -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/include/ncnn
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp1.dir/src
+
+build CMakeFiles/cpp1.dir/src/nanodet.cpp.o: CXX_COMPILER__cpp1_Debug /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/src/nanodet.cpp || cmake_object_order_depends_target_cpp1
+  DEFINES = -Dcpp1_EXPORTS
+  DEP_FILE = CMakeFiles/cpp1.dir/src/nanodet.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info  -fPIC -std=c++11 -frtti -fexceptions -pthread -std=c++11
+  INCLUDES = -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/include/opencv -isystem /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/include/ncnn
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp1.dir/src
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target cpp1
+
+
+#############################################
+# Link the shared library /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so
+
+build /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so: CXX_SHARED_LIBRARY_LINKER__cpp1_Debug CMakeFiles/cpp1.dir/native-lib.cpp.o CMakeFiles/cpp1.dir/src/config.cpp.o CMakeFiles/cpp1.dir/src/tools.cpp.o CMakeFiles/cpp1.dir/src/face.cpp.o CMakeFiles/cpp1.dir/src/nanodet.cpp.o | /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/libs/arm64-v8a/libopencv_java3.so /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/libncnn.a
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fopenmp -fopenmp=libomp -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -O0 -fno-limit-debug-info
+  LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
+  LINK_LIBRARIES = /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so  /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/libs/arm64-v8a/libopencv_java3.so  /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/libncnn.a  -ldl  -lz  -fopenmp  -static-openmp  -pthread  -landroid  -ljnigraphics  -llog  -latomic -lm
+  OBJECT_DIR = CMakeFiles/cpp1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libcpp1.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so
+  TARGET_PDB = cpp1.so.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a && /usr/local/Cellar/cmake/3.24.0/bin/ccmake -S/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp -B/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a && /usr/local/Cellar/cmake/3.24.0/bin/cmake --regenerate-during-build -S/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp -B/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build cpp1: phony /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so
+
+build libcpp1.so: phony /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a
+
+build all: phony /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/arm64-v8a/libcpp1.so
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/CMakeLists.txt /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnn-release.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnn.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnnConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig-version.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVModules-release.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVModules.cmake /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/build/cmake/platforms.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckForPthreads.c /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckIncludeFile.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckLibraryExists.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindOpenMP.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindThreads.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Initialize.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android/Determine-Compiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Linux.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.0/CMakeCCompiler.cmake CMakeFiles/3.24.0/CMakeCXXCompiler.cmake CMakeFiles/3.24.0/CMakeSystem.cmake CMakeFiles/FindOpenMP/OpenMPCheckVersion.c CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp CMakeFiles/FindOpenMP/OpenMPTryFlag.c CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/CMakeLists.txt /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnn-release.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnn.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/arm64-v8a/lib/cmake/ncnn/ncnnConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig-version.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVConfig.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVModules-release.cmake /Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-arm64-v8a/OpenCVModules.cmake /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake /Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/build/cmake/platforms.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckForPthreads.c /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckIncludeFile.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/CheckLibraryExists.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindOpenMP.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/FindThreads.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Clang.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine-C.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine-CXX.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Determine.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android-Initialize.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Android/Determine-Compiler.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/Linux.cmake /usr/local/Cellar/cmake/3.24.0/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.0/CMakeCCompiler.cmake CMakeFiles/3.24.0/CMakeCXXCompiler.cmake CMakeFiles/3.24.0/CMakeSystem.cmake CMakeFiles/FindOpenMP/OpenMPCheckVersion.c CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp CMakeFiles/FindOpenMP/OpenMPTryFlag.c CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

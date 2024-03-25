@@ -1,0 +1,3 @@
+/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a/CMakeFiles/cpp1.dir
+/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/arm64-v8a/CMakeFiles/rebuild_cache.dir

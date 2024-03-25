@@ -1,0 +1,51 @@
+{
+  "buildFiles": [
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/CMakeLists.txt",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/x86/lib/cmake/ncnn/ncnn-release.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/x86/lib/cmake/ncnn/ncnn.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/ncnn-20220701-android/x86/lib/cmake/ncnn/ncnnConfig.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig-version.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/OpenCVConfig.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-x86/OpenCVConfig.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-x86/OpenCVModules-release.cmake",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/jni/abi-x86/OpenCVModules.cmake"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/usr/local/bin/ninja",
+      "-C",
+      "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/usr/local/bin/ninja",
+    "-C",
+    "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cpp1::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "cpp1",
+      "output": "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/x86/libcpp1.so",
+      "runtimeFiles": [
+        "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/src/main/cpp/sdk/native/libs/x86/libopencv_java3.so",
+        "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86/-fopenmp",
+        "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86/-static-openmp",
+        "/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/.cxx/Debug/s5f1h6d3/x86/-pthread"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/caotrung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

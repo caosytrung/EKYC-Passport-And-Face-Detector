@@ -1,0 +1,15 @@
+package com.fast.ekyc.ui.widget
+
+import android.content.Context
+import android.util.AttributeSet
+import com.fast.ekyc.theme.ThemeHolder
+
+internal class AppThemeBoldTextView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = android.R.attr.textViewStyle
+) : AppBoldTextView(context, attrs, defStyleAttr) {
+    init {
+        setTextColor(ThemeHolder.textColor)
+    }
+}
