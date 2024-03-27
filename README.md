@@ -7,10 +7,9 @@ The Android SDK are mainly used for verifying EKYC purpose. This sdk inludes the
 4. Support customizing UI: button colors, font-size, text-color
 5. Support customizing common configurations: flash,  zoom, camera side, debug-mode.
 6. Support `tracking` to track user behaviors.
-![z5288767162918_23d32c2f4c20379fdfca9b721e9e0774](https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/154f6686-9760-4d2f-bac8-2ea2c2a52938 | width=100))
 
-![z5288767163018_dd7f3fc5ad878f5b60d3ee076f828f10](https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/47e4c0fe-9371-4453-8297-0453ab382800)
-
+<img src="https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/154f6686-9760-4d2f-bac8-2ea2c2a52938" width="300">
+<img src="https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/47e4c0fe-9371-4453-8297-0453ab382800" width="300">
 
 ### Prerequisites
 Min Android-SDK version: 19.
