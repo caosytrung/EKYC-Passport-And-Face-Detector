@@ -110,4 +110,4 @@ val tracker = object : EkycTracking {
 FastEkycSDK.setTracker(tracker)
 ```
 
-==Contact me (caotrung.kk@gmail.com) to get the AI models before running apps.==
+<b>HContact me (caotrung.kk@gmail.com) to get the AI models before running apps </b>
