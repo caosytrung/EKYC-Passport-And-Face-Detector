@@ -10,12 +10,12 @@ internal fun EkycConfig.shouldOpenFaceIdentification(): Boolean {
 }
 
 internal fun EkycConfig.buildDisplayCardType(context: Context): String {
-    if (idCardTypes.size == 1) return getCardName(idCardTypes.first(), context, idCardAbbr)
+    if (idCardTypes.size == 1) return getCardName(idCardTypes.first(), context, false)
 
     var result = ""
 
     idCardTypes.forEachIndexed { index, idType ->
-        result += getCardName(idType, context, idCardAbbr)
+        result += getCardName(idType, context, true)
         if (index < idCardTypes.size - 1) {
             result += "/"
         }

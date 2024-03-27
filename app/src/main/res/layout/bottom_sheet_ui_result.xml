@@ -39,26 +39,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tvNfcImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="NFC Card Image"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:visibility="gone" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivNfcImage"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_margin="16dp"
-                    android:scaleType="centerInside"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/kyc_ic_camera" />
-
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -99,14 +79,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Face 2 góc độ"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivAdvanced1"
@@ -156,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:text="Close Result Popup"
+            android:text="Close Popup"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

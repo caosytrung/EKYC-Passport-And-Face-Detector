@@ -3,7 +3,6 @@ package com.fast.ekyc.example
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.preference.PreferenceManager.getDefaultSharedPreferences
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -16,8 +15,8 @@ import com.fast.ekyc.FastEkycSDK
 import com.fast.ekyc.data.config.request.AdvancedLivenessConfig
 import com.fast.ekyc.data.config.request.EkycConfig
 import com.fast.ekyc.data.config.request.EkycConfigBuilder
-import com.fast.ekyc.example.R
 import com.fast.ekyc.example.databinding.ActivityMainBinding
+import com.fast.ekyc.example.utils.PersisDataUtils
 import com.fast.ekyc.tracking.EkycTracking
 import com.fast.ekyc.tracking.EventAction
 import com.fast.ekyc.tracking.EventSrc
@@ -27,6 +26,7 @@ import java.util.Date
 import java.util.Locale
 
 
+// For testing purpose only.
 class ExampleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var currentUIFlowType: EkycConfig.UiFlowType = EkycConfig.UiFlowType.ID_CARD_FRONT
@@ -51,8 +51,28 @@ class ExampleActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.btnKYC.setOnClickListener { startKyc() }
+        configFlowType()
+        configCart()
 
+        binding.apply {
+            btnKYC.setOnClickListener { startKyc() }
+            card.swFrontCard.setOnCheckedChangeListener { _, isChecked ->
+                card.swFrontCard.text = if (isChecked) "Back" else "Front"
+            }
+
+            face.swFrontFace.setOnCheckedChangeListener { _, isChecked ->
+                face.swFrontFace.text = if (isChecked) "Front" else "Back"
+            }
+
+            PersisDataUtils.getPersistData(this@ExampleActivity, UI_FLOW_KEY).let {
+                if (it.isNotEmpty()) {
+                    common.spUIFlowType.setSelection(uiFlowTypelist.indexOf(it))
+                }
+            }
+        }
+    }
+
+    private fun configFlowType() {
         binding.common.spUIFlowType.apply {
             adapter = uiFlowTypeAdapter
             onItemSelectedListener =
@@ -71,19 +91,22 @@ class ExampleActivity : AppCompatActivity() {
 
             setSelection(1)
         }
+    }
 
+    private fun configCart() {
         binding.card.btnSelectIdTypes.setOnClickListener {
+            val passport = getString(R.string.cart_type_passport)
             val selectedString =
-                currentTypeList.map { it.name }.map { if (it == "HC") "Hộ Chiếu" else it }
+                currentTypeList.map { it.name }.map { if (it == "HC") passport else it }
             val selectedBooleans = idCardTypeList.map { selectedString.contains(it) }
             AlertDialog.Builder(this)
-                .setTitle("Chọn loại giấy tờ")
+                .setTitle(getString(R.string.choose_card_type))
                 .setMultiChoiceItems(
                     idCardTypeList.toTypedArray(),
                     selectedBooleans.toBooleanArray()
                 ) { _, which, isChecked ->
                     val name =
-                        if (idCardTypeList[which] == "Hộ Chiếu") "HC" else idCardTypeList[which]
+                        if (idCardTypeList[which] == passport) "HC" else idCardTypeList[which]
                     val item = EkycConfig.IdCardType.valueOf(name)
                     if (isChecked) {
                         currentTypeList.add(item)
@@ -91,27 +114,10 @@ class ExampleActivity : AppCompatActivity() {
                         currentTypeList.remove(item)
                     }
                 }
-                .setPositiveButton("Ok") { _, _ ->
-
-                }
+                .setPositiveButton("Ok") { _, _ -> }
                 .setCancelable(false)
                 .show()
         }
-
-        binding.card.swFrontCard.setOnCheckedChangeListener { _, isChecked ->
-            binding.card.swFrontCard.text = if (isChecked) "Back" else "Front"
-        }
-
-        binding.face.swFrontFace.setOnCheckedChangeListener { _, isChecked ->
-            binding.face.swFrontFace.text = if (isChecked) "Front" else "Back"
-        }
-
-        getPersistData(UI_FLOW_KEY).let {
-            if (it.isNotEmpty()) {
-                binding.common.spUIFlowType.setSelection(uiFlowTypelist.indexOf(it))
-            }
-        }
-
     }
 
     private fun startKyc() {
@@ -152,43 +158,29 @@ class ExampleActivity : AppCompatActivity() {
                 if (binding.common.swFont.isChecked) R.font.amita else com.fast.ekyc.R.font.sarabun_re
             val boldFont =
                 if (binding.common.swFont.isChecked) R.font.amita_bold else com.fast.ekyc.R.font.sarabun_semibold
-            val faceBottomPercentage =
-                binding.common.edtFaceBottomPercentage.text.toString().toFloatOrNull() ?: 0.15f
-            val idCardBoxPercentage =
-                binding.common.edtIdCardBox.text.toString().toFloatOrNull() ?: 0.025f
-
 
             val flash = binding.common.swFlash.isChecked
             val showHelp = binding.common.enableShowHelp.isChecked
             val showAutoCapture = binding.common.enableAutoCapture.isChecked
             val autoCaptureMode = binding.common.swAutoCaptureMode.isChecked
-            val confirm = binding.common.swConfirm.isChecked
             val cacheImage = binding.common.swCacheImage.isChecked
             val isDebug = binding.common.swIsDebug.isChecked
-            val iouThreshold =
-                binding.common.edtIOUThreshold.text.toString().toFloatOrNull() ?: 0.92f
-            val iouCaptureTime =
-                binding.common.edtIOUCaptureTime.text.toString().toIntOrNull() ?: 1000
 
-            val fakeRetake = binding.face.edtFaceRetake.text.toString()
+            val faceRetake = binding.face.edtFaceRetake.text.toString()
                 .toIntOrNull() ?: 10
             val faceMin = binding.face.edtFaceMin.text.toString()
                 .toFloatOrNull() ?: 0.25f
             val faceMax = binding.face.edtFaceMax.text.toString()
                 .toFloatOrNull() ?: 0.7f
 
-            val cardRetake = binding.card.edtCardRetake.text.toString()
-                .toIntOrNull() ?: 10
             val cardMin = binding.card.edtCardMin.text.toString()
                 .toFloatOrNull() ?: 0.6f
-            val idCardABBR = binding.card.swIDCardABBR.isChecked
-
             val isRestricted = if (binding.advanced.switchAdvancedRestricted.isChecked) {
                 EkycConfig.FaceAdvancedMode.RESTRICTED
             } else {
                 EkycConfig.FaceAdvancedMode.UNRESTRICTED
             }
-            savePersistData(UI_FLOW_KEY, currentUIFlowType.name)
+            PersisDataUtils.savePersistData(this, UI_FLOW_KEY, currentUIFlowType.name)
 
             val config = EkycConfigBuilder()
                 .setIdCardTypes(currentTypeList.toList())
@@ -210,18 +202,11 @@ class ExampleActivity : AppCompatActivity() {
                 .setIdCardCameraMode(backCard)
                 .setSelfieCameraMode(frontFace)
                 .setDebug(isDebug)
-                .setIouCaptureTime(iouCaptureTime)
-                .setIouThreshold(iouThreshold)
-                .setSkipConfirmScreen(confirm)
                 .setFaceMinRatio(faceMin)
                 .setFaceMaxRatio(faceMax)
-                .setFaceRetakeLimit(fakeRetake)
+                .setFaceRetakeLimit(faceRetake)
                 .setIdCardMinRatio(cardMin)
-                .setIdCardRetakeLimit(cardRetake)
-                .setIdCardAbbr(idCardABBR)
                 .isCacheImage(cacheImage)
-                .setIdCardBoxPercentage(idCardBoxPercentage)
-                .setFaceBottomPercentage(faceBottomPercentage)
                 .build()
 
             FastEkycSDK.startEkyc(
@@ -261,29 +246,10 @@ class ExampleActivity : AppCompatActivity() {
     }
 
 
-    private fun savePersistData(
-        key: String,
-        value: String,
-    ) {
-        getDefaultSharedPreferences(this)
-            .edit().putString(key, value).apply()
-    }
-
-    private fun getPersistData(
-        key: String,
-    ): String {
-        return getDefaultSharedPreferences(this).getString(key, "") ?: ""
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        val result = FastEkycSDK.getUiFlowResult(requestCode, resultCode, data)
-        result?.let {
-            if (supportFragmentManager.findFragmentByTag(ResultUIBottomSheet.TAG) == null) {
-                ResultUIBottomSheet.newInstance(result)
-                    .show(supportFragmentManager, ResultUIBottomSheet.TAG)
-            }
-        }
+        val result = FastEkycSDK.getResult(requestCode, resultCode, data)
+        if (result)
     }
 
     private fun showToast(message: String) {
@@ -291,9 +257,6 @@ class ExampleActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val SHARED_ID_CARD_KEY = "card"
-        const val SHARED_BIRTH_KEY = "birth"
-        const val SHARED_EXPIRED_KEY = "expired"
         const val UI_FLOW_KEY = "ui_flow"
     }
 }

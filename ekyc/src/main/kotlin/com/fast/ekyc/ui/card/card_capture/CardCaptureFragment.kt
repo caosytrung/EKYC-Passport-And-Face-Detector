@@ -12,8 +12,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.fast.ekyc.BR
-import com.fast.ekyc.R
 import com.fast.ekyc.FastEkycSDK
+import com.fast.ekyc.R
 import com.fast.ekyc.base.ui.camera.BaseCameraFragment
 import com.fast.ekyc.base.ui.camera.CustomSize
 import com.fast.ekyc.data.config.request.EkycConfig
@@ -303,6 +303,7 @@ internal class CardCaptureFragment :
         screenSizeByBitmap: CustomSize,
         data: ByteArray
     ) {
+        val idCardBoxPercentage = 0.025f
         if (cards.size != 1) {
             cardCaptureViewModel.setCardState(CaptureState.UNKNOWN)
             return
@@ -323,7 +324,7 @@ internal class CardCaptureFragment :
                 viewDataBinding.overlayView.drawCardBox(
                     originalCard,
                     screenSizeByBitmap,
-                    config.idCardBoxPercentage
+                    idCardBoxPercentage
                 )
             }
         }
@@ -341,11 +342,8 @@ internal class CardCaptureFragment :
             return
         }
 
-        val ratioPercentage =
-            if (config.idCardBoxPercentage >= 0f && config.idCardBoxPercentage < 1f) config.idCardBoxPercentage else 0f
-
-        val cardDeltaWidth = originalCard.width() * ratioPercentage
-        val cardDeltaHeight = originalCard.height() * ratioPercentage
+        val cardDeltaWidth = originalCard.width() * idCardBoxPercentage
+        val cardDeltaHeight = originalCard.height() * idCardBoxPercentage
         val containCardShape = RectF(
             originalCard.left + cardDeltaWidth,
             originalCard.top + cardDeltaHeight,
@@ -364,7 +362,8 @@ internal class CardCaptureFragment :
 
         Log.d("CardArea Hole care", "$cardArea-$holeArea")
 
-        if (holeArea * (config.idCardMinRatio) > cardArea) {
+        // idCardMinRatio = 0.6f
+        if (holeArea * (0.6f) > cardArea) {
             cardCaptureViewModel.setCardState(CaptureState.TOO_SMALL)
             return
         }

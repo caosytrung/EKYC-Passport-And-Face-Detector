@@ -2,7 +2,7 @@ package com.fast.ekyc.exception
 
 
 sealed class InvalidConfigException(
-    val serverMessage: String
+    serverMessage: String,
 ) : Exception(serverMessage) {
     object MissingFrontCardIdException : InvalidConfigException("Missing Front Card Id")
     object MissingUserIdType : InvalidConfigException("Missing User Id Type")

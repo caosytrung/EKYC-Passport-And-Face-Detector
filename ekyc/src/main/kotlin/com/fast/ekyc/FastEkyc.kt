@@ -31,7 +31,7 @@ object FastEkycSDK {
     }
 
     @JvmStatic
-    fun getUiFlowResult(requestCode: Int, resultCode: Int, data: Intent?): KycUIFlowResult? {
+    fun getResult(requestCode: Int, resultCode: Int, data: Intent?): KycUIFlowResult? {
         if (requestCode == EKYC_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK && data != null) {
                 return data.getParcelableExtra<KycUIFlowResult?>(MainActivity.RESULT_DATA)?.also {

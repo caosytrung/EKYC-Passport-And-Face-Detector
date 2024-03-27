@@ -1,7 +1,7 @@
 package com.fast.ekyc.utils
 
 import android.graphics.Bitmap
-import com.fast.ekyc.data.model.CacheAdvanceImageData
+import com.fast.ekyc.data.model.AdvanceImageData
 
 internal object DataHolder {
     private var cardBitmap: Bitmap? = null
@@ -17,7 +17,7 @@ internal object DataHolder {
     var localBackCardUploadImage: Bitmap? = null
     var localFaceUploadImage: Bitmap? = null
 
-    var uiOnlyAdvanceImageDataList: List<CacheAdvanceImageData>? = null
+    var uiOnlyAdvanceImageDataList: List<AdvanceImageData>? = null
 
     var requests = mutableListOf<String>()
 

@@ -1,6 +1,5 @@
 package com.fast.ekyc.data.config.request
 
-import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
@@ -23,7 +22,6 @@ data class EkycConfig internal constructor(
     val selfieCameraMode: CameraMode,
     val idCardCameraMode: CameraMode,
     val isDebug: Boolean,
-    val skipConfirmScreen: Boolean,
     val faceMinRatio: Float,
     val faceMaxRatio: Float,
     val idCardMinRatio: Float,

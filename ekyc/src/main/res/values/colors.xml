@@ -7,8 +7,8 @@
     <color name="kyc_color_green">#01AD52</color>
     <color name="kyc_switch_off">#DCDEE9</color>
 
-    <color name="kyc_overlay_color">#A4000000</color>
-    <color name="kyc_face_overlay_color">#373646</color>
+    <color name="kyc_overlay_color">#F57C00</color>
+    <color name="kyc_face_overlay_color">#F57C00</color>
     <color name="kyc_color_black">#000000</color>
     <color name="kyc_frame_color">#B4B4B4</color>
     <color name="kyc_face_detection_bg_color">#8D0000</color>

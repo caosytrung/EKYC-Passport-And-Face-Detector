@@ -10,14 +10,12 @@ data class KycUIFlowResult(
     val imageId: String = "",
     var localCroppedImage: Bitmap? = null,
     var localFullImage: Bitmap? = null,
-    var advanceImageDataList: List<CacheAdvanceImageData>? = null,
-    var videoPath: String? = null,
-    var nfcData: KycNfcData? = null,
+    var advanceImageDataList: List<AdvanceImageData>? = null,
 ) : KycResult(resultState), Parcelable
 
 @Parcelize
-class CacheAdvanceImageData(
+class AdvanceImageData(
     val imageId: String? = null,
     val localImage: Bitmap? = null,
-    val labelPose: String? = null
+    val labelPose: String? = null,
 ) : Parcelable

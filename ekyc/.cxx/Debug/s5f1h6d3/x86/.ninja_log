@@ -1,8 +1,8 @@
 # ninja log v5
-21	2418	1711275314541507576	CMakeFiles/cpp1.dir/native-lib.cpp.o	96083ddc4cab83e5
-26	2798	1711275314915545725	CMakeFiles/cpp1.dir/src/nanodet.cpp.o	af56485367e00129
-26	3525	1711275315650447652	CMakeFiles/cpp1.dir/src/tools.cpp.o	77c316eea071109c
-25	3604	1711275315729206691	CMakeFiles/cpp1.dir/src/config.cpp.o	d747ba13cd726a5b
-26	3901	1711275316022635212	CMakeFiles/cpp1.dir/src/face.cpp.o	74563d9477943119
 3902	4451	1711275316476841165	/Users/caotrung/Documents/Personal/Android/Github-Ekyc/ekyc/build/intermediates/cxx/Debug/s5f1h6d3/obj/x86/libcpp1.so	4afa69503cf4589c
+26	3901	1711275316022635212	CMakeFiles/cpp1.dir/src/face.cpp.o	74563d9477943119
+21	2418	1711275314541507576	CMakeFiles/cpp1.dir/native-lib.cpp.o	96083ddc4cab83e5
+25	3604	1711275315729206691	CMakeFiles/cpp1.dir/src/config.cpp.o	d747ba13cd726a5b
+26	3525	1711275315650447652	CMakeFiles/cpp1.dir/src/tools.cpp.o	77c316eea071109c
 5	30	0	clean	ca91ab860e8b0f7a
+26	2798	1711275314915545725	CMakeFiles/cpp1.dir/src/nanodet.cpp.o	af56485367e00129

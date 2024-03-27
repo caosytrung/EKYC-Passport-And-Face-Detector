@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EKYC</string>
+    <string name="choose_card_type">Select the type of card</string>
+    <string name="cart_type_passport">Passport</string>
 </resources>

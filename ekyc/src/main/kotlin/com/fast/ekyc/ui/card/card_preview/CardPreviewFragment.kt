@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isGone
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.fast.ekyc.BR
 import com.fast.ekyc.FastEkycSDK
@@ -28,9 +26,6 @@ import com.fast.ekyc.utils.BitmapUtils
 import com.fast.ekyc.utils.DataHolder
 import com.fast.ekyc.utils.extension.isPassportOnly
 import com.fast.ekyc.utils.extension.setOnSingleClickListener
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 internal class CardPreviewFragment :
@@ -118,51 +113,14 @@ internal class CardPreviewFragment :
                         "type" to mainViewModel.getTrackingCardSide(),
                     )
                 )
-
-                mainViewModel.decreaseCardRetake()
-                checkLimitTime()
             }
 
             ivGuide.setOnSingleClickListener {
                 openGuidePopup()
             }
 
-            if (config.skipConfirmScreen) {
-                lnPreview.isGone = true
-
-                overlayView.post {
-                    cardPreviewViewModel.verifyImage(cropBitmap()!!)
-                }
-            }
-
         }
         observerViewModel()
-    }
-
-    override fun onBackPressed() {
-        mainViewModel.decreaseCardRetake()
-        checkLimitTime()
-    }
-
-    private fun checkLimitTime() {
-        if (mainViewModel.isCardRetakeLimited()) {
-            viewDataBinding.lnPreview.isGone = true
-//            viewDataBinding.tvCameraGuide.isVisible = true
-//            viewDataBinding.tvCameraGuide.setState(CaptureState.LIMITED)
-
-            showErrorDialog(
-                getString(R.string.kyc_notice),
-                getString(R.string.kyc_limited_time),
-                false
-            )
-
-            lifecycleScope.launch(Dispatchers.Main) {
-                delay(3000)
-                getMainActivity()?.onCancelled()
-            }
-        } else {
-            back()
-        }
     }
 
     private fun openGuidePopup() {
@@ -208,17 +166,9 @@ internal class CardPreviewFragment :
                 content = error,
                 context?.getString(R.string.kyc_recapture) ?: "",
                 isCloseButtonVisible = closeButtonVisible
-            ) {
-                mainViewModel.decreaseCardRetake()
-                checkLimitTime()
-            }
-
+            )
             bottomSheet.show(childFragmentManager, ImageErrorBottomSheet.TAG)
         }
-    }
-
-    private fun back() {
-        findNavController().navigateUp()
     }
 
     override fun isShowDefaultLoading(): Boolean {

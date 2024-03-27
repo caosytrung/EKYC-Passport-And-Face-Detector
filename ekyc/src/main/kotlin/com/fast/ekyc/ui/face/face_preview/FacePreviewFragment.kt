@@ -2,7 +2,6 @@ package com.fast.ekyc.ui.face.face_preview
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -83,17 +82,6 @@ internal class FacePreviewFragment :
 
             val bitmap = faceBitmap ?: return
             ivCard.setImageBitmap(bitmap)
-
-            if (config.skipConfirmScreen) {
-                lnPreview.isGone = true
-
-                overlayView.post {
-                    val windowSize = CustomSize(ivCard.width, ivCard.height)
-                    val hole = overlayView.getCroppingHole()
-                    facePreviewViewModel.setupForCroppingBitmap(windowSize, hole)
-                    verifyImage()
-                }
-            }
         }
 
         observerViewModel()
