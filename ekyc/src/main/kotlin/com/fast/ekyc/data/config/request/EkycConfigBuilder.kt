@@ -7,20 +7,16 @@ import com.fast.ekyc.R
 import com.fast.ekyc.exception.InvalidConfigException
 import com.fast.ekyc.theme.ThemeHolder
 import com.fast.ekyc.utils.DataHolder
-import com.fast.ekyc.utils.FaceIOUCaptureUtils
 import com.fast.ekyc.utils.extension.isFrontCardOnly
 
-class EkycConfigBuilder{
+class EkycConfigBuilder {
 
     private var isCacheImage: Boolean = false
     private var idCardTypes: List<EkycConfig.IdCardType> = listOf()
     private var uiFlowType: EkycConfig.UiFlowType = EkycConfig.UiFlowType.ID_CARD_FRONT
-    private var idCardAbbr: Boolean = true
 
     private var faceAdvancedMode = EkycConfig.FaceAdvancedMode.RESTRICTED
     private var advancedLivenessConfig = AdvancedLivenessConfig()
-
-
     private var showHelp: Boolean = true
     private var autoCaptureMode: Boolean = true
     private var showAutoCaptureButton: Boolean = true
@@ -38,8 +34,6 @@ class EkycConfigBuilder{
     private var selfieCameraMode: EkycConfig.CameraMode = EkycConfig.CameraMode.FRONT
     private var idCardCameraMode: EkycConfig.CameraMode = EkycConfig.CameraMode.BACK
 
-    private var skipConfirmScreen: Boolean = false
-
     private var faceMinRatio: Float = 0.25f
     private var faceMaxRatio: Float = 0.7f
     private var idCardMinRatio: Float = 0.6f
@@ -47,8 +41,6 @@ class EkycConfigBuilder{
     private var cardRetakeLimit: Int = 10
 
     private var isDebug: Boolean = false
-    private var iouThreshold: Float = 0.92f
-    private var iouCaptureTime: Int = 1000
 
     private var faceBottomPercentage: Float = 0.15f
     private var idCardBoxPercentage: Float = 0.025f
@@ -59,10 +51,6 @@ class EkycConfigBuilder{
 
     fun setUiFlowType(uiFlowType: EkycConfig.UiFlowType) = apply {
         this.uiFlowType = uiFlowType
-    }
-
-    fun setIdCardAbbr(idCardAbbr: Boolean) = apply {
-        this.idCardAbbr = idCardAbbr
     }
 
     fun isCacheImage(isCacheImage: Boolean) = apply {
@@ -134,18 +122,6 @@ class EkycConfigBuilder{
         this.isDebug = isDebug
     }
 
-    fun setIouThreshold(iouThreshold: Float) = apply {
-        this.iouThreshold = iouThreshold
-    }
-
-    fun setIouCaptureTime(iouCaptureTime: Int) = apply {
-        this.iouCaptureTime = iouCaptureTime
-    }
-
-    fun setSkipConfirmScreen(showConfirmScreen: Boolean) = apply {
-        this.skipConfirmScreen = showConfirmScreen
-    }
-
     fun setFaceMinRatio(ratio: Float) = apply {
         faceMinRatio = ratio
     }
@@ -160,18 +136,6 @@ class EkycConfigBuilder{
 
     fun setFaceRetakeLimit(faceRetakeLimit: Int) = apply {
         this.faceRetakeLimit = faceRetakeLimit
-    }
-
-    fun setIdCardRetakeLimit(cardRetakeLimit: Int) = apply {
-        this.cardRetakeLimit = cardRetakeLimit
-    }
-
-    fun setFaceBottomPercentage(faceBottomPercentage: Float) = apply {
-        this.faceBottomPercentage = faceBottomPercentage
-    }
-
-    fun setIdCardBoxPercentage(idCardBoxPercentage: Float) = apply {
-        this.idCardBoxPercentage = idCardBoxPercentage
     }
 
     @Throws
@@ -191,15 +155,12 @@ class EkycConfigBuilder{
         }
 
         ThemeHolder.buttonColor = buttonColor
-        ThemeHolder.backgroundColor = backgroundColor
         ThemeHolder.textColor = textColor
         ThemeHolder.popupBackgroundColor = popupBackgroundColor
         ThemeHolder.buttonCornerRadius = buttonCornerRadius
         ThemeHolder.fontRegular = fontRegular
         ThemeHolder.fontMedium = fontMedium
 
-        FaceIOUCaptureUtils.THRESHOLD = iouThreshold
-        FaceIOUCaptureUtils.MAX_TIME_IN_MILLI_SECOND = iouCaptureTime
         DataHolder.clear()
 
         return EkycConfig(
@@ -207,7 +168,7 @@ class EkycConfigBuilder{
             uiFlowType = uiFlowType,
             isCacheImage = isCacheImage,
             faceAdvancedMode = faceAdvancedMode,
-            idCardAbbr = idCardAbbr,
+            idCardAbbr = true,
             showHelp = showHelp,
             showAutoCaptureButton = showAutoCaptureButton,
             autoCaptureMode = autoCaptureMode,
@@ -220,7 +181,6 @@ class EkycConfigBuilder{
             selfieCameraMode = selfieCameraMode,
             idCardCameraMode = idCardCameraMode,
             isDebug = isDebug,
-            skipConfirmScreen = skipConfirmScreen,
             faceMinRatio = faceMinRatio,
             faceMaxRatio = faceMaxRatio,
             idCardMinRatio = idCardMinRatio,

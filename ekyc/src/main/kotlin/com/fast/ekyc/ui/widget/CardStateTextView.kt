@@ -70,7 +70,7 @@ internal class CardStateTextView @JvmOverloads constructor(
             cardSide?.let {
                 val displayCard = if (it.isEmpty()) "" else "$it "
                 val str =
-                    SpannableStringBuilder("Để ${displayCard.lowercase()} trong khung")
+                    SpannableStringBuilder("Put ${displayCard.lowercase()} inside the frame")
                 str.setSpan(
                     StyleSpan(Typeface.BOLD),
                     3,
