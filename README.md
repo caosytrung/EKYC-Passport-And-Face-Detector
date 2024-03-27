@@ -1,15 +1,16 @@
 # Fast EKYC
 
-The Android SDK are mainly used for verifying EKYC purpose. This sdk inludes these features:
-1. Detect type of cards: id-card, passport, driving license.
-2. Detect straigh-face,left-face, right face.
+The Android SDK is mainly used for verifying EKYC purposes. This SDK includes these features:
+1. Detect the type of cards: ID-card, passport, driving license.
+2. Detect straight-face, left-face, and right-face.
 3. Support `auto-capture modes`: If the camera detects that the face is valid or the card is valid, SDK will capture images automatically.
-4. Support customizing UI: button colors, font-size, text-color
-5. Support customizing common configurations: flash,  zoom, camera side, debug-mode.
+4. Support customizing UI: button colors, font size, text-color
+5. Support customizing common configurations: flash,  zoom, camera side, debug mode.
 6. Support `tracking` to track user behaviors.
 
 <img src="https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/154f6686-9760-4d2f-bac8-2ea2c2a52938" width="300">
 <img src="https://github.com/caosytrung/Fast-EKYC-Android-SDK/assets/17381611/47e4c0fe-9371-4453-8297-0453ab382800" width="300">
+
 
 ### Prerequisites
 Min Android-SDK version: 19.
@@ -25,7 +26,7 @@ android {
 
 ### Start Ekyc
 
-#### Build Config to open EKYC
+#### Build EkycConfig to open EKYC
 
 ```dart
 val config = EkycConfigBuilder()
@@ -64,7 +65,7 @@ ViettelEkycSDK.startEkyc(
 ```
 
 #### Retrieve EKYC Result.
-Using onActivityResult to get result. If resul† is null, it means that there is user-cancelled or there are some errors happened.
+Using onActivityResult to get the Ekyc-results. If result is null, it means that the users cancelled or there are some errors happened.
 ```dart
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
@@ -92,7 +93,7 @@ class AdvanceImageData(
 ```
 
 #### Setup tracking
-Fast-EKYC provide an interface to help main-app can receive the tracks of user behaviours
+Fast-EKYC provides an interface to help main-apps can receive the tracks of user behaviours
 
 Define your tracking interface.
 ``` dart
@@ -110,4 +111,4 @@ val tracker = object : EkycTracking {
 FastEkycSDK.setTracker(tracker)
 ```
 
-<b>HContact me (caotrung.kk@gmail.com) to get the AI models before running apps </b>
+<b>Contact me (caotrung.kk@gmail.com) to get the AI models before running apps </b>
