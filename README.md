@@ -51,14 +51,16 @@ val config = EkycConfigBuilder()
 
 #### Open Ekyc from Activities.
 ```dart
-ViettelEkycSDK.startEkyc(
+FastEkycSDK.startEkyc
+(
    activity = activity,
    config = config
 )
 ```
 #### Open Ekyc from Fragments.
 ```dart
-ViettelEkycSDK.startEkyc(
+FastEkycSDK.startEkyc
+(
    fragment = fragment,
    config = config
 )
